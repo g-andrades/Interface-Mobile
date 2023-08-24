@@ -38,6 +38,7 @@ export const styles = StyleSheet.create({
         fontSize: 18,
         alignItems : 'center',
         justifyContent: 'center',
+        flexDirection : 'column'
 
     },
 
