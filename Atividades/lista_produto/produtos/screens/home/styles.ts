@@ -25,7 +25,8 @@ export const styles = StyleSheet.create({
         paddingLeft: 16,
         borderRadius: 5,
         fontSize: 18,
-        flex : 1
+        flex : 1,
+        flexDirection: 'row'
     },
 
     button : {
@@ -38,7 +39,7 @@ export const styles = StyleSheet.create({
         fontSize: 18,
         alignItems : 'center',
         justifyContent: 'center',
-        flexDirection : 'column',
+        flexDirection : 'row',
 
     },
 
