@@ -19,7 +19,7 @@ export const styles = StyleSheet.create({
 
     input : {
         height:56,
-        width: 56,
+        width: 240,
         backgroundColor: '#1f1e25',
         color:'#fff',
         paddingLeft: 16,
@@ -45,7 +45,7 @@ export const styles = StyleSheet.create({
 
     textButton : {
        fontSize : 28,
-       color: '#fff'
+       color: '#fff',
     },
 
     form : {

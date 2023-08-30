@@ -28,7 +28,7 @@ export default function Home(){
 //remover um participante
 //a crase ` é usada para concatenar as strings
     function handleProductRemove(name: String){
-        Alert.alert('Remover', `Remover um produto ${name}`,
+        Alert.alert('Remover', `Remover ${name}`,
         [
             {
                 text: 'Sim',
@@ -63,7 +63,7 @@ export default function Home(){
             <TouchableOpacity 
                     style={styles.button} 
                     onPress={handleProductsAdd}>
-                <Text style={styles.textButton}> adicionar </Text>
+                <Text style={styles.textButton}>+</Text>
 
             </TouchableOpacity>
         </View>
