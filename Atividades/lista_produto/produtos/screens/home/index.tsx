@@ -63,7 +63,7 @@ export default function Home(){
             <TouchableOpacity 
                     style={styles.button} 
                     onPress={handleProductsAdd}>
-                <Text style={styles.textButton}>+</Text>
+                <Text style={styles.textButton}>Adicionar</Text>
 
             </TouchableOpacity>
         </View>

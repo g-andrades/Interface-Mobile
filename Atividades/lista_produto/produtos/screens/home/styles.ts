@@ -19,19 +19,16 @@ export const styles = StyleSheet.create({
 
     input : {
         height:56,
-        width: 240,
         backgroundColor: '#1f1e25',
         color:'#fff',
         paddingLeft: 16,
         borderRadius: 5,
         fontSize: 18,
-        flex : 1,
-        flexDirection: 'row'
+       
     },
 
     button : {
-        height:56,
-        width: 56,
+        height:70,
         backgroundColor: '#31cf67',
         color:'#fff',
         paddingLeft: 16,
@@ -40,7 +37,7 @@ export const styles = StyleSheet.create({
         alignItems : 'center',
         justifyContent: 'center',
         flexDirection : 'row',
-
+       
     },
 
     textButton : {
@@ -49,8 +46,9 @@ export const styles = StyleSheet.create({
     },
 
     form : {
-        flexDirection : 'row',
         marginTop : 10,
+        height: 200,
+        width: '100%'
     }, 
 
     listEmpty:{
