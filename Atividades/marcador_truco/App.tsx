@@ -1,9 +1,7 @@
-import Home from "./Screens/Home";
+import Home from './screens/home/home';
 
 export default function App() {
-  return(
-
+  return (
     <Home/>
-  );
-  
+  )
 }
