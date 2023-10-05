@@ -1,18 +1,20 @@
 import { useNavigation } from "@react-navigation/native";
 import { Button, Text, TextInput, Image, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 
 export function TelaQuestao() {
 
     const navigation = useNavigation()
 
-    function handlePrevious() {
-        navigation.navigate('home')
+    function handleBack(){
+        //desempilha
+        navigation.goBack
     }
 
     return (
 
-        <View>
+        <SafeAreaView>
             <View>
                 <Button title="Voltar" color={'#BE6A40'}
                     onPress={handlePrevious} />
@@ -30,10 +32,10 @@ export function TelaQuestao() {
                 <Text>40 questões</Text>
             </View>
             <View>
-                <Image source={require('../Home/image.png')}></Image>
+                <Image source={require('../../assets/logo.png')} />
             </View>
 
-        </View>
+        </SafeAreaView>
 
     )
 }

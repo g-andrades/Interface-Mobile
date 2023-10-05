@@ -1,25 +1,26 @@
 import { useNavigation } from "@react-navigation/native";
-import { Button, Text, View } from "react-native";
+import { Button, Image, Text, View } from "react-native";
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-export function Home(){
+export function Home() {
 
 
-    const navigation = useNavigation() 
+    const navigation = useNavigation()
 
-    function handleNext(){
-         navigation.navigate('register')
+    function handleNext() {
+        navigation.navigate('register')
     }
 
     return (
 
-        <View>
+        <SafeAreaView>
 
-            <Text>CESUL</Text>
+            <Image source={require('../../assets/logo.png')} />
 
             <Button title="Proximo" color={'#01633D'}
-            onPress={handleNext}/>
+                onPress={handleNext} />
 
 
-        </View>
+        </SafeAreaView>
     )
 }

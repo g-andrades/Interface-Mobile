@@ -1,30 +1,47 @@
-import { Button, Text, TextInput, View } from "react-native";
+import { useNavigation } from "@react-navigation/native"
+import { useState } from "react";
+import { View, Text, TextInput, Button } from "react-native"
+import { SafeAreaView } from 'react-native-safe-area-context';
+
 
 
 export function Register(){
 
+    const [name, setName] = useState('');
+
+    const navigation = useNavigation()
+
+    function handleNext(){
+        navigation.navigate('result', {name})
+    }
+
+    function handleBack(){
+        navigation.goBack()
+    }
+
+    function handleFinish(){
+    }
+
+
     return(
-
-        <View>
-            <Text>Cesul</Text>
-
+        <SafeAreaView>
+            <Text> CESUL </Text>
 
             <View>
-                <Text>Informe seu nome</Text>
-                <TextInput/>
-                <Text>Informe seu sobrenome</Text>
+                <Text>Informa seu nome</Text>
+                <TextInput value = {name} onChangeText={setName}/>
+            </View>
+
+            <View>
+                <Text>Informa seu sobrenome</Text>
                 <TextInput/>
             </View>
 
             <View>
-                <Button title="Voltar"  color={'#860929'}/>
-                <Button title="Proximo" color={'#01633D'} />
+                <Button onPress={handleBack} title = "Voltar" color={'#860929'}/>
+                <Button onPress={handleNext} title = "Proximo" color={'#01633D'}/>
             </View>
 
-
-
-        </View>
-
-
+        </SafeAreaView>
     )
 }

@@ -1,5 +1,7 @@
 import { useNavigation } from "@react-navigation/native";
 import { Button, Image, Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+
 
 export function Home(){
 
@@ -12,7 +14,7 @@ export function Home(){
 
     return (
 
-        <View>
+        <SafeAreaView>
 
             <Text>Bem-vindo ao scanner de gabarito Cesul</Text>
 
@@ -21,8 +23,8 @@ export function Home(){
             <Button title="Corrigir provas" color={'#BE6A40'}
             onPress={handleNext}/>
 
-            <Image source={require('../Home/image.png')}></Image>
+            <Image source={require('../../assets/logo.png')} />
           
-        </View>
+        </SafeAreaView>
     )
 }
