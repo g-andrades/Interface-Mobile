@@ -12,6 +12,10 @@ export function Home(){
          navigation.navigate('telaquestao')
     }
 
+    function handleNextCorrecao(){
+        navigation.navigate('sequenciaquestao')
+   }
+
     return (
 
         <SafeAreaView>
@@ -19,9 +23,8 @@ export function Home(){
             <Text>Bem-vindo ao scanner de gabarito Cesul</Text>
 
             <Button title="Baixar gabaritos" color={'#BE6A40'}
-            onPress={handleNext}/>
-            <Button title="Corrigir provas" color={'#BE6A40'}
-            onPress={handleNext}/>
+                onPress={handleNext}/>
+            <Button title="Corrigir provas" color={'#BE6A40'} onPress={handleNextCorrecao}/>
 
             <Image source={require('../../assets/logo.png')} />
           

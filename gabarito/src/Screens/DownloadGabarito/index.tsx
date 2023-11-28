@@ -9,7 +9,7 @@ export function DownloadGabarito() {
 
     function handleBack(){
         //desempilha
-        navigation.goBack
+        navigation.navigate('telaquestao')
     }
 
     return (
