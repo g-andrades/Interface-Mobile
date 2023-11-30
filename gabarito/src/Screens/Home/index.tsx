@@ -1,33 +1,40 @@
 import { useNavigation } from "@react-navigation/native";
-import { Button, Image, Text, View } from "react-native";
+import { Button, Image, Text, View, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { styles } from './styles';
+import { LinearGradient } from "expo-linear-gradient";
+
+export function Home() {
 
 
-export function Home(){
+    const navigation = useNavigation()
 
-
-    const navigation = useNavigation() 
-
-    function handleNext(){
-         navigation.navigate('telaquestao')
+    function handleNext() {
+        navigation.navigate('telaquestao')
     }
 
-    function handleNextCorrecao(){
+    function handleNextCorrecao() {
         navigation.navigate('sequenciaquestao')
-   }
+    }
 
     return (
 
         <SafeAreaView>
+            <View style={styles.background}>
+                <LinearGradient colors={['#FFFF', '#e9b9a1']} style={styles.background} >
+                    <Text style={styles.title}>BEM-VINDO AO SCANNER DE GABARITO CESUL</Text>
 
-            <Text>Bem-vindo ao scanner de gabarito Cesul</Text>
+                    <TouchableOpacity style={styles.button} onPress={handleNext}>
+                        <Text style={styles.titulo} > Baixar gabaritos </Text>
+                    </TouchableOpacity>
 
-            <Button title="Baixar gabaritos" color={'#BE6A40'}
-                onPress={handleNext}/>
-            <Button title="Corrigir provas" color={'#BE6A40'} onPress={handleNextCorrecao}/>
+                    <TouchableOpacity style={styles.button} onPress={handleNextCorrecao}>
+                        <Text style={styles.titulo} > Corrigir provas </Text>
+                    </TouchableOpacity>
 
-            <Image source={require('../../assets/logo.png')} />
-          
+                    <Image style={styles.img} source={require('../../assets/logo.png')} />
+                </LinearGradient>
+            </View>
         </SafeAreaView>
     )
 }
