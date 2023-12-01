@@ -17,6 +17,48 @@ export const styles = StyleSheet.create({
     textAlign: 'center'
   },
 
+  titulo:{
+    color: '#FFF',
+    fontSize: 20,
+    textAlign:'center',
+    fontWeight:'bold',
+  },
+
+  buttonadd: {
+    height: 30,
+    width: 30,
+    backgroundColor: '#BE6A40',
+    borderRadius: 5,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginLeft: 40,
+  },
+
+  buttontop:{
+    marginTop: 50,
+    marginBottom: 10,
+    backgroundColor: '#BE6A40',
+    color:'#FFFF',
+    alignItems:"center",
+    justifyContent:'center',
+    marginLeft: 40,
+    borderRadius: 20,
+    width: 300,
+    height: 55,
+  },
+
+  buttonbottom:{
+    marginTop: 300,
+    marginBottom: 10,
+    marginLeft: 40,
+    backgroundColor: '#BE6A40',
+    color:'#FFFF',
+    alignItems:"center",
+    justifyContent:'center',
+    borderRadius: 20,
+    width: 300,
+    height: 55,
+  },
 
   input: {
     height: 56,
@@ -30,15 +72,6 @@ export const styles = StyleSheet.create({
     height: 50,
     width: 35,
     color: 'black'
-  },
-
-  button: {
-    height: 30,
-    width: 50,
-    backgroundColor: '#BE6A40',
-    borderRadius: 5,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 
   textButton: {
@@ -58,5 +91,25 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
+  img:{
+    marginTop: 10,
+    alignItems:"center",
+    justifyContent:'center',
+    marginLeft: 85,
+  },
+
+  back:{
+    borderRadius: 20,
+    width: 250,
+    height: 55,
+  },
+
+  imgback:{
+    marginTop: 5,
+    marginLeft: 5,
+  },
+
+
 
 })

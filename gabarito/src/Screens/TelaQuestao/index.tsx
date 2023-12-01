@@ -23,22 +23,30 @@ export function TelaQuestao() {
             <LinearGradient colors={['#FFFF','#e9b9a1']} >
                     <View>
                         <TouchableOpacity style={styles.back} onPress={handleBack} >
-                            <Image style={styles.imgback} source={require('../../assets/Arrowback.jpg')} />
+                            <Image style={styles.imgback} source={require('../../assets/flechaback.png')} />
                         </TouchableOpacity>
 
                         <Text style={styles.titulo} >Selecione o modelo de gabarito usado na avaliação</Text>
                     </View>
                     <View style={styles.alinhaview} > 
                         <View>
-                            <TouchableOpacity style={styles.downloadt}></TouchableOpacity>
+                            <TouchableOpacity style={styles.downloadt}>
+                            <Image style={styles.imgback} source={require('../../assets/download1.png')} />
+                            </TouchableOpacity>
                                 <Text style={styles.textdownloadt} >10 Questões</Text>
-                            <TouchableOpacity style={styles.downloadt}></TouchableOpacity>
+                            <TouchableOpacity style={styles.downloadt}>
+                            <Image style={styles.imgback} source={require('../../assets/download3.png')} />
+                            </TouchableOpacity>
                                 <Text style={styles.textdownloadt} >30 Questões</Text>
                         </View>
                         <View>
-                            <TouchableOpacity style={styles.downloadt}></TouchableOpacity>
+                            <TouchableOpacity style={styles.downloadt}>
+                            <Image style={styles.imgback} source={require('../../assets/download2.png')} />
+                            </TouchableOpacity>
                                 <Text style={styles.textdownloadt} >20 Questões</Text>
-                            <TouchableOpacity style={styles.downloadt} onPress={handleNext} ></TouchableOpacity>
+                            <TouchableOpacity style={styles.downloadt} onPress={handleNext}>
+                            <Image style={styles.imgback} source={require('../../assets/download4.png')} />
+                            </TouchableOpacity>
                                 <Text style={styles.textdownloadt} >40 Questões</Text>
                         </View>
                     </View>

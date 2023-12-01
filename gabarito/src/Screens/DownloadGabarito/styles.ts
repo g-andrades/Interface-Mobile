@@ -13,6 +13,11 @@ export const styles = StyleSheet.create({
     marginRight: 20,
   },
 
+  background:{
+    flex:1,
+    backgroundColor: '#FFFF',
+  },
+
   button:{
     marginTop: 20,
     marginBottom: 10,
@@ -37,6 +42,33 @@ export const styles = StyleSheet.create({
     alignItems:"center",
     justifyContent:'center',
     marginLeft: 85,
+  },
+
+  back:{
+    borderRadius: 20,
+    width: 250,
+    height: 55,
+  },
+
+  imgback:{
+    marginTop: 5,
+    marginLeft: 5,
+    width: 50,
+    justifyContent: 'flex-start',
+  },
+
+  imggabarito:{
+    marginTop:30,
+    marginLeft: 15,
+    width: 370,
+    justifyContent: 'flex-start',
+  },
+
+  imgdownload:{
+    marginTop: -40,
+    marginLeft: 340,
+    width: 50,
+    justifyContent: 'flex-end',
   },
 
 })

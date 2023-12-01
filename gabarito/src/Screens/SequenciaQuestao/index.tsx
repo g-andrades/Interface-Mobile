@@ -4,6 +4,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { styles } from './styles';
 import { Alternative } from "@components/index";
 import { useState } from "react";
+import { LinearGradient } from "expo-linear-gradient";
 
 
 
@@ -33,52 +34,54 @@ export function SequenciaQuestao() {
 
     return (
 
-        <SafeAreaView>
-            <View>
-                <View style={styles.viewBack}>
-                    <Button title="<="
-                        onPress={handleBack} />
+        <SafeAreaView >
+            <LinearGradient colors={['#FFFF', '#e9b9a1']} >
+                <View>
+                    <TouchableOpacity style={styles.back} onPress={handleBack} >
+                            <Image style={styles.imgback} source={require('../../assets/flechaback.png')} />
+                            
+                    </TouchableOpacity>
+
+                    <View>
+                        <View>
+                            <TouchableOpacity style={styles.buttontop} onPress={handleNext}>
+                                <Text style={styles.titulo} > Coloque a sequência das respostas </Text>
+                            </TouchableOpacity>
+
+                            <TextInput
+                                placeholderTextColor={"#000"}
+                                onChangeText={setAlternativeRight}
+                                value={alternativeRight}
+                            />
+
+                            <TouchableOpacity
+                                style={styles.buttonadd}
+                                onPress={handleAlternativeAdd}>
+
+                                <Text style={styles.textButton}> +</Text>
+
+                            </TouchableOpacity>
+                            <FlatList
+                                data={alternative}
+                                keyExtractor={item => item}
+                                renderItem={({ item }) => (
+                                    <Alternative key={item}
+                                        name={item} />
+                                )}
+                            />
+                            <TouchableOpacity
+                                style={styles.buttonbottom}
+                                onPress={handleNext}>
+                                <Text style={styles.titulo}>Upload do gabarito</Text>
+                            </TouchableOpacity>
+                        </View>
+                    </View>
                 </View>
 
                 <View>
-                    <View>
-                        <Text style={styles.title}>Coloque a sequência correta das questões</Text>
-                        <TextInput
-                            placeholder='Digite a alternativa correta'
-                            placeholderTextColor={"#000"}
-                            onChangeText={setAlternativeRight}
-                            value={alternativeRight}
-                        />
-
-                        <TouchableOpacity
-                            style={styles.button}
-                            onPress={handleAlternativeAdd}>
-
-                            <Text style={styles.textButton}> +</Text>
-
-                        </TouchableOpacity>
-                        <FlatList
-                            data={alternative}
-                            keyExtractor={item => item}
-                            renderItem={({ item }) => (
-                                <Alternative key={item}
-                                    name={item} />
-                            )}
-                        />
-                        <TouchableOpacity
-                            onPress={handleNext}>
-                            <Text style={styles.uploadGabarito}>Upload do gabarito</Text>
-
-                        </TouchableOpacity>
-                    </View>
-
-
+                    <Image style={styles.img} source={require('../../assets/logo.png')} />
                 </View>
-            </View>
-
-            <View>
-                <Image source={require('../../assets/logo.png')} />
-            </View>
+            </LinearGradient>
         </SafeAreaView >
 
     )

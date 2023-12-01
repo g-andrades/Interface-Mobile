@@ -39,7 +39,7 @@ export const styles = StyleSheet.create({
   },
 
   img:{
-    marginTop: 100,
+    marginTop: 60,
     marginLeft: 90,
   },
 
@@ -65,6 +65,13 @@ export const styles = StyleSheet.create({
     height: 150,
     backgroundColor: '#BE6A40',
     margin: 20,
+  },
+
+  imgdownload:{
+    marginLeft: 5,
+    marginTop: 10,
+    marginRight: 'auto',
+  
   },
 
   textdownloadt:{

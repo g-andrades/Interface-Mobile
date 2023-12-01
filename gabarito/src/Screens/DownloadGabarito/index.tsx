@@ -1,6 +1,7 @@
 import { useNavigation } from "@react-navigation/native";
-import { Button, Text, TextInput, Image, View } from "react-native";
+import { Button, Text, TextInput, Image, View , TouchableOpacity} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { styles } from './styles';
 
 //PAG 03
 export function DownloadGabarito() {
@@ -14,17 +15,18 @@ export function DownloadGabarito() {
 
     return (
 
-        <SafeAreaView>
+        <SafeAreaView style={styles.background}>
             <View>
-                <Button title="Voltar" color={'#BE6A40'}
-                    onPress={handleBack} />
-                <Text>Download</Text>
-                <Text>Selecione o modelo de gabarito usado na avaliação</Text>
+                <TouchableOpacity style={styles.back} onPress={handleBack} >
+                    <Image style={styles.imgback} source={require('../../assets/flechaback.png')} />
+                </TouchableOpacity>
             </View>
             <View>
-                <Image source={require('../../assets/logo.png')} />
+                <Image style={styles.imgdownload} source={require('../../assets/Download.png')} />
             </View>
-                <Text>VER COMO FAZ DOWNLOAD</Text>
+            <View>
+                <Image style={styles.imggabarito} source={require('../../assets/gabaritoteste2.png')} />
+            </View>
         </SafeAreaView>
 
     )

@@ -35,7 +35,7 @@ export const styles = StyleSheet.create({
   },
 
   img:{
-    marginTop: 200,
+    marginTop: 150,
     alignItems:"center",
     justifyContent:'center',
     marginLeft: 85,
